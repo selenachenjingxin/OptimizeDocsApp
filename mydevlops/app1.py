@@ -95,8 +95,7 @@ sequential_chain2=SimpleSequentialChain(chains=[chain1,chain4,chain3])
 
 if prompt_documents:
     response2=sequential_chain2.run(prompt_documents)
-    with st.container():
-        st.write(response2)
+    st.write(response2)
 
 if prompt_documents1:
     #for i in range(len(documents)):
@@ -104,6 +103,5 @@ if prompt_documents1:
     #response2=chain4.run(response1)
     
     # Display the results
-    with st.container():
-        st.write(response1)
+    st.write(response1)
 
