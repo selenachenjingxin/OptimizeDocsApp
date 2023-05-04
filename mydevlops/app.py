@@ -1,5 +1,5 @@
 import os
-from api import apikey
+import oai
 import streamlit as st
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
@@ -8,7 +8,7 @@ from langchain.memory import ConversationBufferMemory
 
 
 
-os.environ["OPENAI_API_KEY"]=apikey
+os.environ["OPENAI_API_KEY"]=openai.api.key
 
 st.title('My own Website')
 prompt_input=st.text_input('write a piece of text，I can help you optimize it')

@@ -1,6 +1,8 @@
 import os
-from api import apikey
+
 import streamlit as st
+import openai
+import oai
 from langchain.llms import OpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
@@ -13,6 +15,8 @@ from langchain.chains import LLMChain,SequentialChain
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import SimpleSequentialChain
 
+openai.api_key= os.getenv("OPENAI_API_KEY") 
+
 #loader = UnstructuredHTMLLoader("oprator's manual.html")
 #documents = loader.load()
 
@@ -21,7 +25,6 @@ st.title('You can optimize your content and convert to qualified DITA XML here, 
 prompt_documents = st.text_area ( 'Input a piece of text, I can help you optimize it and convert to dita xml format' )
 prompt_documents1 = st.text_area ( 'Input a piece of dita xml text, I can help you optimize it\'s content' )
 
-os.environ["OPENAI_API_KEY"]=apikey
 llm = OpenAI(temperature=0.7,max_tokens=2500)
 
 template1 = """
