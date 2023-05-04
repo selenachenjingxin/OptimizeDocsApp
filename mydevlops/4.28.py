@@ -15,6 +15,7 @@ from langchain.chains import SimpleSequentialChain
 
 #loader = UnstructuredHTMLLoader("oprator's manual.html")
 #documents = loader.load()
+
 #text_splitter = CharacterTextSplitter(chunk_size=300, chunk_overlap=100)
 st.title('You can optimize your content and convert to qualified DITA XML here, just input your content below')
 prompt_documents = st.text_area ( 'Input a piece of text, I can help you optimize it and convert to dita xml format' )
