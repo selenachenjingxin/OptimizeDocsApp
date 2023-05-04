@@ -1,6 +1,7 @@
 import os
 from api import apikey
 import streamlit as st
+from langchain.llms import OpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.text_splitter import CharacterTextSplitter
